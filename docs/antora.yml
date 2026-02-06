@@ -1,0 +1,14 @@
+name: board
+version: true
+title: 'BoardName: Subtitle'
+nav:
+- modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    description: >
+      Board description.
+    # TODO: Add once it is registered
+    # oshw: US002717
+    # TODO: Add PDF title image
+    # title-logo-image: image::logo.jpg[]

@@ -1,0 +1,26 @@
+# Mainly for testing standalone version of the site.
+# Going to just a component in mult-repo docsite in the future.
+
+site:
+  title: Board Template
+  start_page: board::index.adoc
+
+content:
+  sources:
+  - url: .
+    start_paths: docs
+    branches: HEAD
+
+ui:
+  bundle:
+    url: https://github.com/beagleboard/antora-ui-beagle/releases/download/continuous-release/ui-bundle.zip
+    snapshot: true
+
+antora:
+  extensions:
+  - '@antora/pdf-extension'
+  - '@antora/lunr-extension'
+
+asciidoc:
+  attributes:
+    page-pagination: ''

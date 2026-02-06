@@ -1,0 +1,3 @@
+= Expansion
+
+This section is intended for those that want to build or use add-on hardware, including the software to support it.

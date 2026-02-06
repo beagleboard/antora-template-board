@@ -1,0 +1,3 @@
+= Support
+
+This section is intended to contain fast-reference details meant largely for distributors and people who have encountered a problem. This is meant to let people know about production-level details and escalation paths for handling commercial-level issues, including board revisions that could impact their usage in production.

@@ -1,0 +1,38 @@
+= Antora Board Template
+
+This repository provides a starting template for board documentation using Antora.
+It is configured to use the BeagleBoard Antora UI theme:
+
+https://github.com/beagleboard/antora-ui-beagle
+
+== Build Locally
+
+The recommended way to build documentation for this board is to use the Antora Docker image.
+
+=== Using Docker
+
+Run the following command from the repository root:
+
+ $ docker run -v $PWD:/antora:Z --rm -it ghcr.io/beagleboard/antora-docker:main antora-playbook-local.yml
+
+=== Using Podman
+
+Alternatively, you can use Podman:
+
+ $ podman run -v $PWD:/antora:Z --rm -it ghcr.io/beagleboard/antora-docker:main antora-playbook-local.yml
+
+This will generate the documentation site in: build/site
+
+== Preview Changes
+
+To preview the generated documentation locally, run:
+
+ $ python -m http.server --directory build/site 8000
+
+Then open your browser and go to: http://localhost:8000
+
+== Notes
+
+- No local Antora installation is required when using the container.
+- All dependencies (Antora, Node, Ruby, PDF tooling, etc.) are included in the container.
+- Use `antora-playbook-local.yml` for building this repository independently.

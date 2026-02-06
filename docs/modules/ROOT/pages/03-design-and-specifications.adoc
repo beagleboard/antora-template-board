@@ -1,0 +1,3 @@
+= Design and Specifications
+
+This section is intended for those that want to understand the hardware design itself. It should cover the rationale put into each design decision and provide a basis for debugging or cloning the design.
