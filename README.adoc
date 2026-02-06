@@ -1,0 +1,22 @@
+= Antora Board Template
+
+This is an antora starting template for board documentation. It uses the [BeagleBoard antora theme](https://github.com/beagleboard/antora-ui-beagle).
+
+== Build Locally
+
+1. Install asciidoctor-pdf:
+   - Fedora
+
+ $ sudo dnf install asciidoctor-pdf -y
+
+   - Ubuntu
+
+ $ sudo apt-get install -y --no-install-recommends ruby-asciidoctor-pdf
+
+2. Install antora and required dependencies:
+
+ $ npm i
+
+3. Build:
+
+ $ npx antora antora-playbook-local.yml

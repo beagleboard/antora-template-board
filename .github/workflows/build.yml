@@ -1,0 +1,39 @@
+on:
+  pull_request:
+    branches: [ "main" ]
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ['main']
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+
+      - uses: actions/setup-node@v6
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends ruby-asciidoctor-pdf
+          npm install --quiet --no-progress
+
+      - name: Build preview
+        run: npx antora antora-playbook-local.yml --fetch --stacktrace
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          # Upload public folder
+          path: './build/site'
+
+      - name: Upload pdfs
+        uses: actions/upload-artifact@v6
+        with:
+          name: pdfs
+          path: build/assembler-pdf/*

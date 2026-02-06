@@ -1,0 +1,12 @@
+name: board
+version: true
+title: BoardName
+nav:
+- modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    description: >
+      Board description.
+    # TODO: Add once it is registered
+    # oshw: US002717

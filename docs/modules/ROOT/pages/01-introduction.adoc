@@ -1,0 +1,3 @@
+= Introduction
+
+This section is intended for those with no familiarity with the board. It should give them enough information to help decide if they want to get one for some purpose and give them some overview of what they might do with it if they didn't already have a project in mind. It should lead them to the other sections after capturing their initial interest.
